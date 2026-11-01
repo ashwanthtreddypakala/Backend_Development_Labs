@@ -10,7 +10,7 @@
 
 ## Live Link
 
-Deployment is pending. A persistent SQLite database requires a server environment with a writable, persistent disk (such as a Render Web Service or Railway container). Serverless platforms like Vercel run ephemeral stateless functions with read-only file systems, making native SQLite writes non-persistent. Local testing is fully functional and verified on `http://localhost:3000`.
+https://backend-development-lab-02.vercel.app/
 
 ## Objective
 
