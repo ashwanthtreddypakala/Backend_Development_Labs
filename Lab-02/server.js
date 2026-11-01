@@ -1,6 +1,8 @@
 const express = require("express");
 const sqlite = require("sqlite");
 const sqlite3 = require("sqlite3");
+const fs = require("fs");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,8 +26,19 @@ let db;
 async function startServer() {
   // Open (or create) books.db. If this fails we log the real error and exit.
   try {
+    // In serverless environments (like Vercel), the deployment directory is read-only.
+    // Copy books.db to /tmp so write operations (POST, PUT, DELETE) succeed.
+    let dbFilename = path.join(__dirname, "books.db");
+    if (process.env.VERCEL) {
+      const tmpDb = path.join("/tmp", "books.db");
+      if (!fs.existsSync(tmpDb)) {
+        fs.copyFileSync(dbFilename, tmpDb);
+      }
+      dbFilename = tmpDb;
+    }
+
     db = await sqlite.open({
-      filename: "./books.db",
+      filename: dbFilename,
       driver: sqlite3.Database
     });
     console.log("Connected to books.db");
@@ -198,4 +211,6 @@ app.use((request, response) => {
 // ── Start ─────────────────────────────────────────────────────────────────────
 
 startServer();
+
+module.exports = app;
 

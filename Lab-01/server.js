@@ -33,3 +33,5 @@ app.use((request, response) => {
 app.listen(PORT, () => {
   console.log(`Express server running at http://localhost:${PORT}`);
 });
+
+module.exports = app;
