@@ -1,0 +1,29 @@
+{
+  "name": "express-js-lab-2",
+  "version": "1.0.0",
+  "description": "Lab 2: SQLite database and CRUD routes - Backend Development Fundamentals",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sqlite",
+    "lab"
+  ],
+  "author": "PAKALA ASHWANTH",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "allowScripts": {
+    "sqlite3@5.1.7": true
+  }
+}

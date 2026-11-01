@@ -1,3 +1,5 @@
 node_modules/
 .env
-take-screenshots.js
+.DS_Store
+Thumbs.db
+Lab-2/
