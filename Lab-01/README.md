@@ -10,7 +10,7 @@
 
 ## Live Link
 
-Deployment is pending. A persistent Node.js/Express server requires a backend runtime (such as Render, Railway, or Heroku). Local testing is fully functional on `http://localhost:3000`.
+https://backend-development-lab-01-psi.vercel.app/
 
 ## Objective
 
