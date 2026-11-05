@@ -7,7 +7,7 @@
 
 ## Live Link
 
-[Deployment pending — add your Render service URL here once deployed]
+https://backend-development-lab-03.vercel.app/
 
 On Render's free plan the service sleeps after 15 minutes without traffic, so the first request can take about a minute. The free plan also does not keep files between restarts, so any book added, changed or deleted through the live link is lost on restart and the database goes back to its 10 starting rows.
 
